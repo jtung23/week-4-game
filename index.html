@@ -3,43 +3,57 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title> Crystal Collector</title>
+	<title> Meat Collector</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-	<h1>Crystal Collector</h1>
+	<h1>Meat Collector</h1>
 
-	<div>
-		body info
+<div class ="container">
+	<div class="row">
+		<div id="description" class="col-xs-6 justify-content-start">
+		Each meaty picture is assigned a random number.<br>
+		Click the pictures to get your total to match the randomly generated number<br>
+		If your number goes over then you lose!
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6 panel panel-default">
+  			<div class="panel-heading text-center">Match this number!</div>
+  			<div id="random-number" class="panel-body text-center">0</div>
+		</div>
 	</div>
 
-	<div id="random-number">
-		0
-	</div>
-	<div id="images">
+	<div id="image-row" class="row">
+		<div id="images" class="col-xs-8">
+			
+			<img id = "img1" class="btn img-rounded img-thumbnail" src="assets/images/brisket.jpg" alt="img1">
+			<img id = "img2" class="btn img-rounded img-thumbnail" src="assets/images/chicken.jpg" alt="img2">
+			<img id = "img3" class="btn img-rounded img-thumbnail" src="assets/images/meatplatter.jpeg" alt="img3">
+			<img id = "img4" class="btn img-rounded img-thumbnail" src="assets/images/pork.jpg" alt="img4">
+		</div>
 
-		<img id = "img1" class="img-rounded img-thumbnail" src="assets/images/brisket.jpg" alt="img1">
-		<img id = "img2" class="img-rounded img-thumbnail" src="assets/images/chicken.jpg" alt="img2">
-		<img id = "img3" class="img-rounded img-thumbnail" src="assets/images/meatplatter.jpeg" alt="img3">
-		<img id = "img4" class="img-rounded img-thumbnail" src="assets/images/pork.jpg" alt="img4">
-
-	</div>
-
-	<div>
-		Your final score is:
-	</div>
-
-	<div id="total-number">
-		0
+		<div id="winslosebox" class="col-xs-4 panel panel-default">
+  		<div class="panel-body">
+  			<p>Wins: <span id="wins"></span> </p>
+			<p>Loses:<span id="lose"></span> </p>
+		</div>
+		</div>
+			
 	</div>
 
-	<div>
+	<div class="row">
+		<div class="col-xs-6 panel panel-default">
+  			<div class="panel-heading text-center">Your final score is:</div>
+  			<div id="total-number" class="panel-body text-center">0</div>
+		</div>
+	</div>
+</div>
 
-	<p>Wins:<span id="wins"></span> </p>
-	<p>Loses:<span id="lose"></span> </p>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="assets/javascript/game.js"></script>
 

@@ -1,4 +1,34 @@
+body {
+	background-image: url("../images/natural_paper.png")
+}
+
+h1 {
+	background-image: url("../images/shattered.png");
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-family: 'Roboto Slab', serif;
+	color: #362187;
+
+}
+
+#description {
+	font-family: 'Droid Serif', serif;
+	background-image: url("../images/wormz.png");
+	margin-bottom: 10px;
+	word-wrap: break-word;
+}
+
+#winslosebox {
+	background-color: #934c0e;
+	text-align: justify;
+	color: #f1fc19;
+}
 img {
 	width: 100px;
-	height: 100px;
+	height: 75px;
+}
+
+#image-row {
+	margin-bottom: 10px;
 }
