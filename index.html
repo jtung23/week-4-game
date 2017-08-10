@@ -9,14 +9,14 @@
 </head>
 
 <body>
-	<h1>Meat Collector</h1>
+	<h1><b>Meat Collector</b></h1>
 
 <div class ="container">
 	<div class="row">
 		<div id="description" class="col-xs-6 justify-content-start">
-		Each meaty picture is assigned a random number.<br>
+		<b>Each meaty picture is assigned a random number.<br>
 		Click the pictures to get your total to match the randomly generated number<br>
-		If your number goes over then you lose!
+		If your number goes over then you lose!</b>
 		</div>
 	</div>
 	<div class="row">
@@ -24,24 +24,23 @@
   			<div class="panel-heading text-center">Match this number!</div>
   			<div id="random-number" class="panel-body text-center">0</div>
 		</div>
+
+		<div id="winslosebox" class="col-xs-3 panel panel-default">
+  		<div class="panel-body">
+  			<p>Wins: <span id="wins"></span> </p>
+			<p>Loses:<span id="lose"></span> </p>
+		</div>
+		</div>
 	</div>
 
 	<div id="image-row" class="row">
-		<div id="images" class="col-xs-8">
+		<div id="images" class="col-xs-9">
 			
 			<img id = "img1" class="btn img-rounded img-thumbnail" src="assets/images/brisket.jpg" alt="img1">
 			<img id = "img2" class="btn img-rounded img-thumbnail" src="assets/images/chicken.jpg" alt="img2">
 			<img id = "img3" class="btn img-rounded img-thumbnail" src="assets/images/meatplatter.jpeg" alt="img3">
 			<img id = "img4" class="btn img-rounded img-thumbnail" src="assets/images/pork.jpg" alt="img4">
 		</div>
-
-		<div id="winslosebox" class="col-xs-4 panel panel-default">
-  		<div class="panel-body">
-  			<p>Wins: <span id="wins"></span> </p>
-			<p>Loses:<span id="lose"></span> </p>
-		</div>
-		</div>
-			
 	</div>
 
 	<div class="row">

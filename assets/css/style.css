@@ -1,5 +1,7 @@
 body {
-	background-image: url("../images/natural_paper.png")
+	background-image: url("../images/natural_paper.png");
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 h1 {
@@ -20,15 +22,18 @@ h1 {
 }
 
 #winslosebox {
-	background-color: #934c0e;
 	text-align: justify;
-	color: #f1fc19;
+	color: #062351;
 }
 img {
-	width: 100px;
-	height: 75px;
+	width: 125px;
+	height: 90px;
 }
 
 #image-row {
 	margin-bottom: 10px;
+}
+
+.img-thumbnail {
+	background-image: url("../images/natural_paper.png");
 }

@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
 	
+	var meatArray = []
 	var totalnumber = 0
 	var randomNumbers = Math.floor(Math.random() * 9) + 1;
 	var win = $('#wins').html()
@@ -21,14 +22,55 @@ $(document).ready(function() {
 	}
 
 	function generateAllRandomValues() {
-		$('#img1').attr('value', generateRandomValue(1, 12));
-		$('#img2').attr('value', generateRandomValue(1, 12));
-		$('#img3').attr('value', generateRandomValue(1, 12));
-		$('#img4').attr('value', generateRandomValue(1, 12));
 
 		$('#random-number').html(generateRandomValue(19, 120));
+
+		for (var i = 0; meatArray.length < 5; i++) {
+			var imgIdNumber = $("#img" + i)
+			imgIdNumber.attr('value', generateRandomValue(1, 12));
+			var meatValue = imgIdNumber.attr('value');
+			meatArray.push(meatValue);
+			console.log(meatArray)
+			meatValue = meatArray[meatArray.length - 1];
+
+		if (numberInArray(meatArray, meatValue)) {
+			numberInArray(meatArray, meatValue);
+			imgIdNumber.attr('value', generateRandomValue(1,12));			
+			meatValue = imgIdNumber.attr('value');
+			meatArray.push(meatValue);
+			meatValue = meatArray[meatArray.length];
+		}
+		}
+		console.log(meatArray)
 	}
-	
+
+
+	// 	$('#img1').attr('value', generateRandomValue(1, 12));
+	// 	$('#img2').attr('value', generateRandomValue(1, 12));
+	// 	$('#img3').attr('value', generateRandomValue(1, 12));
+	// 	$('#img4').attr('value', generateRandomValue(1, 12));
+
+	// }
+
+	function numberInArray(array, value) {
+		var count = 0 
+
+		for (var i = 0; i < array.length; i++) {
+			if (array[i] == value) count++;
+		}
+
+		if (count === 2) {
+			console.log(array);
+			array.pop();
+			console.log(count===2);
+			console.log(array);
+			return true;
+		}	
+		else {
+			return false;
+			console.log(array);
+		}
+}
 	setWinLose();
 
 	resetAfterWinLose();
